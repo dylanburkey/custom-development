@@ -1,64 +1,18 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/texmath.css">
-    <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="assets/js/main.js" type="text/javascript"></script>
 </head>
-
-<body class="markdown-body">
-    <h1 id="project-requirments---development-details-3" data-line="0" class="code-line code-line code-line" id="project-requirments---development-details-4" id="project-requirments---development-details-5">Project Requirments - Development Details</h1>
-    <p data-line="3" class="code-line code-line code-line">Author: Dylan Burkey Date: 02/06/2019</p>
-    <hr>
-    <h2 id="project-outline-3" data-line="8" class="code-line code-line code-line" id="project-outline-4" id="project-outline-5">Project Outline</h2>
-    <ul>
-        <li data-line="10" class="code-line code-line code-line">Configure current DNS to use Shopify.</li>
-        <li data-line="11" class="code-line code-line code-line">Configure development and production enviorments.</li>
-        <li data-line="12" class="code-line code-line code-line">Content Migration</li>
-        <li data-line="13" class="code-line code-line code-line">&quot;Crawl&quot;current website for a complete list of URLs.</li>
-        <li data-line="14" class="code-line code-line code-line">301 redirects required for all current URLs.</li>
-        <li data-line="15" class="code-line code-line code-line">Prevent broken links</li>
-        <li data-line="16" class="code-line code-line code-line">Prevent Google, Bing and other search engines from penalizizin/blacklisting website.</li>
-        <li data-line="17" class="code-line code-line code-line">Content Migration.</li>
-        <li data-line="18" class="code-line code-line code-line">Data Normalization.</li>
-        <li data-line="19" class="code-line code-line code-line">Custom Email Functionallity.</li>
-        <li data-line="20" class="code-line code-line code-line">Front-end data integration and web development.</li>
-    </ul>
-    <hr>
-    <h2 id="dns-domain-name-server-managementmigration-3" data-line="24" class="code-line code-line code-line" id="dns-domain-name-server-managementmigration-4" id="dns-domain-name-server-managementmigration-5">DNS (Domain Name Server) Management/Migration</h2>
-    <p data-line="27" class="code-line code-line code-line">Current DNS records will need to be updated to load Shopify correctly.</p>
-    <p data-line="29" class="code-line code-line code-line">CNAME records will need to be added for development and production enviorments.</p>
-    <hr>
-    <h2 id="content-migration-3" data-line="33" class="code-line code-line code-line" id="content-migration-4" id="content-migration-5">Content Migration</h2>
-    <p data-line="35" class="code-line code-line code-line">Current website content and assets must be exported to integrate with Shopfiy. Access to the current CMS or Datbase will be required to export required data.</p>
-    <p data-line="38" class="code-line code-line code-line">As the current website handles PIO (Personal Identifiable Information), and handles user state (Login/Logout and Register) data will need to be sanatized during the export process.</p>
-    <p data-line="41" class="code-line code-line code-line"><em>Stipulation:</em> If the client does not have access to their Database or is unable to provide access to their CMS: Custom programming will be required to develop a &quot;Web Scraper&quot; to aggrigate current website content and assets.</p>
-    <hr>
-    <h2 id="data-normalization-3" data-line="47" class="code-line code-line code-line" id="data-normalization-4" id="data-normalization-5">Data Normalization</h2>
-    <p data-line="49" class="code-line code-line code-line">Data that is exported from the current website must be normalized and structured.</p>
-    <p data-line="51" class="code-line code-line code-line">Shopfiy interacts with data using custom Database/JSON naming conventions and structures. This process requires mapping current content to Shopify's data requiremnts.</p>
-    <hr>
-    <h2 id="custom-email-functionallity-3" data-line="55" class="code-line code-line code-line" id="custom-email-functionallity-4" id="custom-email-functionallity-5">Custom Email Functionallity</h2>
-    <p data-line="57" class="code-line code-line code-line"><strong>Requirments:</strong></p>
-    <ul>
-        <li data-line="59" class="code-line code-line code-line">Ability to push and pull data from current CRM.</li>
-        <li data-line="60" class="code-line code-line code-line">Custom development necessary for integration between CRM and Shopify.</li>
-        <li data-line="61" class="code-line code-line code-line">SMTP/MX record integration and custom development.</li>
-    </ul>
-    <p data-line="63" class="code-line code-line code-line"><strong>Custom development</strong></p>
-    <ul>
-        <li data-line="64" class="code-line code-line code-line">Development required for CRM integration.</li>
-        <li data-line="65" class="code-line code-line code-line">Configure client's MX and SMTP records (necessary to prevent outgoing emails flagged as spam).</li>
-        <li data-line="66" class="code-line code-line code-line">Programming and front-end integration of custom email solution.</li>
-    </ul>
-    <hr>
-
+<body>
+    <div class="container">
+        <span id="ip">
+            <!-- Return IP From API Call -->
+        </span>
+    </div>
+    
 </body>
-
 </html>
